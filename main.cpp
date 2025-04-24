@@ -2,14 +2,14 @@
 #include <iomanip>
 using namespace std;
 
-// Structure for menu items
+
 struct MenuItem {
     int id;
     string name;
     float price;
 };
 
-// Function to display the menu
+
 void displayMenu(MenuItem menu[], int size) {
     cout << "\n========== MENU ==========\n";
     cout << "ID\tItem\t\tPrice\n";
@@ -32,7 +32,7 @@ int main() {
         {6, "Water", 1.00}
     };
 
-    const int MAX_ORDER = 10; // Maximum items that can be ordered
+    const int MAX_ORDER = 10;
     MenuItem order[MAX_ORDER];
     int orderCount = 0;
     int choice;
@@ -46,7 +46,7 @@ int main() {
         cout << "\nEnter the ID of the item you want to order: ";
         cin >> choice;
 
-        // Find the selected item
+
         bool found = false;
         for (int i = 0; i < MENU_SIZE; i++) {
             if (menu[i].id == choice) {
@@ -72,7 +72,7 @@ int main() {
 
     } while ((continueOrder == 'y' || continueOrder == 'Y') && orderCount < MAX_ORDER);
 
-    // Calculate total and display receipt
+
     if (orderCount > 0) {
         float total = 0.0;
 
